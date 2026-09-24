@@ -43,7 +43,6 @@
     "logo": "https://gustavolarcodev.github.io/FoodTrucks/apple-touch-icon.png",
     "image": "https://gustavolarcodev.github.io/FoodTrucks/Images/og.jpg",
     "email": "ventas@ftrucks.mx",
-    "telephone": "+52 866 154 1605",
     "areaServed": "MX"
   }
   </script>
@@ -118,7 +117,10 @@
               <span data-i18n="cta_quote">Solicitar cotización</span>
               <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
-            <a href="https://wa.me/528661541605" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+            <a href="#portafolio" class="btn btn-outline-light btn-lg" data-hide-if-wa>
+              <span data-i18n="cta_portfolio">Ver unidades fabricadas</span>
+            </a>
+            <a href="#contacto" class="btn btn-outline-light btn-lg js-wa" target="_blank" rel="noopener" hidden>
               <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
               <span data-i18n="cta_whatsapp_long">Escríbenos por WhatsApp</span>
             </a>
@@ -158,22 +160,22 @@
         </header>
         <div class="cards">
           <article class="card reveal">
-            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-blueprint"/></svg></span><span class="card-num">01</span></div>
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-blueprint"/></svg></span><span class="card-num" aria-hidden="true">01</span></div>
             <h3 data-i18n="svc_design_title">Diseño e ingeniería</h3>
             <p data-i18n="svc_design_desc">Layout sanitario, flujos, selección de equipo y memoria técnica para una operación eficiente.</p>
           </article>
           <article class="card reveal">
-            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-weld"/></svg></span><span class="card-num">02</span></div>
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-weld"/></svg></span><span class="card-num" aria-hidden="true">02</span></div>
             <h3 data-i18n="svc_build_title">Fabricación a medida</h3>
             <p data-i18n="svc_build_desc">Estructura, recubrimientos, instalaciones eléctricas y de gas con pruebas de hermeticidad.</p>
           </article>
           <article class="card reveal">
-            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="card-num">03</span></div>
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="card-num" aria-hidden="true">03</span></div>
             <h3 data-i18n="svc_equip_title">Equipamiento profesional</h3>
             <p data-i18n="svc_equip_desc">Plancha, freidoras, refrigeración, campana y extracción con filtros y supresión opcional.</p>
           </article>
           <article class="card reveal">
-            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-stamp"/></svg></span><span class="card-num">04</span></div>
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-stamp"/></svg></span><span class="card-num" aria-hidden="true">04</span></div>
             <h3 data-i18n="svc_paper_title">Acompañamiento en trámites</h3>
             <p data-i18n="svc_paper_desc">Documentación técnica de la unidad para alta, permisos y operación en México.</p>
           </article>
@@ -195,15 +197,15 @@
         <div class="model-copy reveal">
           <p class="eyebrow" data-i18n="model_eyebrow">Modelo destacado</p>
           <h2 id="modelo-title" data-i18n="model_title">Remolque 8 × 16 ft</h2>
-          <p class="model-price"><span class="model-from" data-i18n="model_from">Desde</span> <strong>21,500 USD</strong></p>
-          <p class="model-note" data-i18n="model_note">Precio de promoción mostrado en nuestro material publicitario. Confirma disponibilidad y precio vigente al cotizar.</p>
-          <h3 class="model-list-title" data-i18n="model_equipment">Equipamiento de la promoción</h3>
+          <p class="model-lead" data-i18n="model_lead">Un remolque compacto con ventana de servicio y plataforma trasera, pensado para cocinas de plancha y fritura.</p>
+          <h3 class="model-list-title" data-i18n="model_equipment">Configuración de ejemplo</h3>
           <ul class="model-list" role="list">
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_griddle">Plancha</span></li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_burners">Quemadores</span></li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_fryer">Freidora</span></li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_bainmarie">Baño maría</span></li>
           </ul>
+          <p class="model-note" data-i18n="model_note">Medidas, equipamiento y precio se definen contigo en la cotización.</p>
           <div class="cta-group">
             <a href="#contacto" class="btn btn-primary" data-preset="remolque">
               <span data-i18n="model_cta">Cotizar este modelo</span>
@@ -319,9 +321,9 @@
               <span class="tile-cap"><span data-i18n="g_night_cap">Iluminación LED nocturna</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
             </button>
           </li>
-          <li class="tile tile-wide reveal">
+          <li class="tile reveal">
             <button type="button" class="tile-btn" data-full="Images/fotos/cocina-inox.webp">
-              <img src="Images/fotos/cocina-inox.webp" width="503" height="244" loading="lazy" decoding="async" alt="Interior de cocina en acero inoxidable con campana de extracción y gabinetes rojos" data-i18n-alt="g_kitchen" />
+              <img src="Images/fotos/cocina-inox.webp" width="225" height="244" loading="lazy" decoding="async" alt="Interior de cocina en acero inoxidable con campana de extracción y gabinetes rojos" data-i18n-alt="g_kitchen" />
               <span class="tile-cap"><span data-i18n="g_kitchen_cap">Interior de cocina en acero inoxidable</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
             </button>
           </li>
@@ -331,20 +333,15 @@
               <span class="tile-cap"><span data-i18n="g_orange_cap">Remolque rojo anaranjado</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
             </button>
           </li>
+          <li class="tile tile-cta reveal">
+            <a href="#contacto" class="tile-cta-link">
+              <span class="tile-cta-kicker" data-i18n="g_cta_kicker">¿Tienes un concepto?</span>
+              <span class="tile-cta-title" data-i18n="g_cta_title">Diseñemos tu unidad</span>
+              <span class="tile-cta-go"><span data-i18n="cta_quote">Solicitar cotización</span><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+            </a>
+          </li>
         </ul>
 
-        <div class="promos reveal">
-          <div class="promos-head">
-            <h3 data-i18n="promos_title">Material promocional</h3>
-            <p data-i18n="promos_sub">Nuestros anuncios originales, tal como se publicaron.</p>
-          </div>
-          <ul class="promo-list" role="list">
-            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-1.webp"><img src="Images/promos/flyer-1-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 1: remolques rosa, azul y rojos con cocina de acero inoxidable" data-i18n-alt="promo_1" /></button></li>
-            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-2.webp"><img src="Images/promos/flyer-2-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 2: remolque rojo con ventanas abatibles" data-i18n-alt="promo_2" /></button></li>
-            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-3.webp"><img src="Images/promos/flyer-3-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 3: remolque azul de 8 × 16 pies" data-i18n-alt="promo_3" /></button></li>
-            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-4.webp"><img src="Images/promos/flyer-4-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 4: remolques y food truck rojo anaranjado" data-i18n-alt="promo_4" /></button></li>
-          </ul>
-        </div>
       </div>
     </section>
 
@@ -359,7 +356,11 @@
             <span data-i18n="cta2_button">Hablar con un asesor</span>
             <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
-          <a href="https://wa.me/528661541605" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+          <a href="mailto:ventas@ftrucks.mx" class="btn btn-outline-light btn-lg" data-hide-if-wa>
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            <span data-i18n="cta_email">Escríbenos un correo</span>
+          </a>
+          <a href="#contacto" class="btn btn-outline-light btn-lg js-wa" target="_blank" rel="noopener" hidden>
             <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
             <span>WhatsApp</span>
           </a>
@@ -372,7 +373,7 @@
         <header class="section-head reveal">
           <p class="eyebrow" data-i18n="contact_eyebrow">Cotiza sin compromiso</p>
           <h2 id="contacto-title" data-i18n="contact_title">Contacto</h2>
-          <p class="section-sub" data-i18n="contact_sub">Completa el formulario y envíanos tu solicitud por WhatsApp o por correo.</p>
+          <p class="section-sub" data-i18n="contact_sub">Completa el formulario y envíanos tu solicitud por correo.</p>
         </header>
         <div class="contact">
           <form class="form reveal" id="quoteForm" novalidate>
@@ -406,13 +407,13 @@
               <label for="f-mensaje" data-i18n="ph_message">Cuéntanos tu concepto, menú y necesidades</label>
               <textarea id="f-mensaje" name="mensaje" rows="4"></textarea>
             </div>
-            <p class="form-hint" data-i18n="form_hint">Los campos con * son obligatorios. Al enviar se abrirá WhatsApp o tu app de correo con el mensaje listo.</p>
+            <p class="form-hint" data-i18n="form_hint">Los campos con * son obligatorios. Al enviar se abrirá tu app de correo con el mensaje listo.</p>
             <div class="form-actions">
-              <button type="submit" class="btn btn-primary btn-lg" data-channel="wa">
+              <button type="submit" class="btn btn-primary btn-lg js-wa" data-channel="wa" hidden>
                 <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
                 <span data-i18n="send_wa">Enviar por WhatsApp</span>
               </button>
-              <button type="submit" class="btn btn-ghost btn-lg" data-channel="mail">
+              <button type="submit" class="btn btn-primary btn-lg js-mail-btn" data-channel="mail">
                 <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
                 <span data-i18n="send_mail">Enviar por correo</span>
               </button>
@@ -421,11 +422,11 @@
           </form>
 
           <div class="contact-info reveal">
-            <a class="info-item" href="tel:+528661541605">
+            <a class="info-item js-tel" href="#contacto" hidden>
               <span class="info-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
-              <span><strong data-i18n="label_phone">Teléfono</strong><span class="info-val">+52 866 154 1605</span></span>
+              <span><strong data-i18n="label_phone">Teléfono</strong><span class="info-val js-tel-text"></span></span>
             </a>
-            <a class="info-item" href="https://wa.me/528661541605" target="_blank" rel="noopener">
+            <a class="info-item js-wa" href="#contacto" target="_blank" rel="noopener" hidden>
               <span class="info-icon info-icon-wa"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></span>
               <span><strong data-i18n="label_whatsapp">WhatsApp</strong><span class="info-val" data-i18n="cta_whatsapp">Chatear ahora</span></span>
             </a>
@@ -460,7 +461,7 @@
         <a href="#contacto" data-i18n="footer_contact">Contacto</a>
       </nav>
       <div class="footer-contact">
-        <a href="tel:+528661541605">+52 866 154 1605</a>
+        <a class="js-tel js-tel-text" href="#contacto" hidden></a>
         <a href="mailto:ventas@ftrucks.mx">ventas@ftrucks.mx</a>
       </div>
     </div>
@@ -470,13 +471,13 @@
     </div>
   </footer>
 
-  <a class="floating-wa" href="https://wa.me/528661541605" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" data-i18n-aria-label="wa_aria">
+  <a class="floating-wa js-wa" href="#contacto" target="_blank" rel="noopener" hidden aria-label="Escríbenos por WhatsApp" data-i18n-aria-label="wa_aria">
     <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
   </a>
 
   <dialog class="lightbox" id="lightbox" aria-label="Galería" data-i18n-aria-label="lb_aria">
     <div class="lb-inner">
-      <img id="lbImg" src="" alt="" />
+      <img id="lbImg" alt="" />
       <p class="lb-cap" id="lbCap"></p>
     </div>
     <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Cerrar" data-i18n-aria-label="lb_close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>

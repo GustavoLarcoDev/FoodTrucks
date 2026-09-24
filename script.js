@@ -1,8 +1,12 @@
 (() => {
   'use strict';
 
-  // Contacto (un solo lugar para cambiarlo en JS)
-  const WA_NUMBER = '528661541605';
+  // Contacto: un solo lugar para cambiarlo.
+  // WA_NUMBER: solo dígitos con código de país (p. ej. '5255XXXXXXXX').
+  // PHONE: número para mostrar (p. ej. '+52 55 XXXX XXXX').
+  // Si están vacíos, los botones de WhatsApp y el teléfono no se muestran.
+  const WA_NUMBER = '';
+  const PHONE = '';
   const EMAIL = 'ventas@ftrucks.mx';
 
   const i18n = {
@@ -27,6 +31,8 @@
       hero_sub: 'Diseñamos y construimos unidades listas para operar y exportar en México, con ingeniería sanitaria, gas, eléctrica y acabados de alto desempeño.',
       cta_quote: 'Solicitar cotización',
       cta_whatsapp_long: 'Escríbenos por WhatsApp',
+      cta_portfolio: 'Ver unidades fabricadas',
+      cta_email: 'Escríbenos un correo',
       trust_warranty: 'Garantía de fábrica',
       trust_turnkey: 'Entrega llave en mano',
       trust_foodgrade: 'Materiales grado alimenticio',
@@ -46,9 +52,9 @@
       svc_paper_desc: 'Documentación técnica de la unidad para alta, permisos y operación en México.',
       model_eyebrow: 'Modelo destacado',
       model_title: 'Remolque 8 × 16 ft',
-      model_from: 'Desde',
-      model_note: 'Precio de promoción mostrado en nuestro material publicitario. Confirma disponibilidad y precio vigente al cotizar.',
-      model_equipment: 'Equipamiento de la promoción',
+      model_lead: 'Un remolque compacto con ventana de servicio y plataforma trasera, pensado para cocinas de plancha y fritura.',
+      model_note: 'Medidas, equipamiento y precio se definen contigo en la cotización.',
+      model_equipment: 'Configuración de ejemplo',
       eq_griddle: 'Plancha',
       eq_burners: 'Quemadores',
       eq_fryer: 'Freidora',
@@ -92,12 +98,8 @@
       g_kitchen_cap: 'Interior de cocina en acero inoxidable',
       g_orange: 'Remolque rojo anaranjado con ventana de servicio y lanza de arrastre',
       g_orange_cap: 'Remolque rojo anaranjado',
-      promos_title: 'Material promocional',
-      promos_sub: 'Nuestros anuncios originales, tal como se publicaron.',
-      promo_1: 'Anuncio promocional 1: remolques rosa, azul y rojos con cocina de acero inoxidable',
-      promo_2: 'Anuncio promocional 2: remolque rojo con ventanas abatibles',
-      promo_3: 'Anuncio promocional 3: remolque azul de 8 × 16 pies',
-      promo_4: 'Anuncio promocional 4: remolques y food truck rojo anaranjado',
+      g_cta_kicker: '¿Tienes un concepto?',
+      g_cta_title: 'Diseñemos tu unidad',
       lb_aria: 'Galería',
       lb_close: 'Cerrar',
       lb_prev: 'Anterior',
@@ -107,7 +109,8 @@
       cta2_button: 'Hablar con un asesor',
       contact_eyebrow: 'Cotiza sin compromiso',
       contact_title: 'Contacto',
-      contact_sub: 'Completa el formulario y envíanos tu solicitud por WhatsApp o por correo.',
+      contact_sub: 'Completa el formulario y envíanos tu solicitud por correo.',
+      contact_sub_wa: 'Completa el formulario y envíanos tu solicitud por WhatsApp o por correo.',
       ph_name: 'Nombre',
       ph_phone: 'Teléfono',
       ph_email: 'Correo',
@@ -118,7 +121,8 @@
       opt_truck: 'Camioneta',
       opt_van: 'Van',
       opt_conversion: 'Conversión',
-      form_hint: 'Los campos con * son obligatorios. Al enviar se abrirá WhatsApp o tu app de correo con el mensaje listo.',
+      form_hint: 'Los campos con * son obligatorios. Al enviar se abrirá tu app de correo con el mensaje listo.',
+      form_hint_wa: 'Los campos con * son obligatorios. Al enviar se abrirá WhatsApp o tu app de correo con el mensaje listo.',
       send_wa: 'Enviar por WhatsApp',
       send_mail: 'Enviar por correo',
       label_phone: 'Teléfono',
@@ -167,6 +171,8 @@
       hero_sub: 'We design and build turnkey units ready to operate and export in Mexico, with sanitary, gas, and electrical engineering and premium finishes.',
       cta_quote: 'Request a quote',
       cta_whatsapp_long: 'Message us on WhatsApp',
+      cta_portfolio: 'See trucks we built',
+      cta_email: 'Email us',
       trust_warranty: 'Factory warranty',
       trust_turnkey: 'Turnkey delivery',
       trust_foodgrade: 'Food-grade materials',
@@ -186,9 +192,9 @@
       svc_paper_desc: 'Technical documentation for registration, permits and operation in Mexico.',
       model_eyebrow: 'Featured model',
       model_title: '8 × 16 ft trailer',
-      model_from: 'From',
-      model_note: 'Promotional price shown in our advertising. Confirm availability and current pricing when you request a quote.',
-      model_equipment: 'Equipment in the promotion',
+      model_lead: 'A compact trailer with a service window and rear platform, built for griddle and fryer kitchens.',
+      model_note: 'Size, equipment and price are defined with you in the quote.',
+      model_equipment: 'Sample configuration',
       eq_griddle: 'Griddle',
       eq_burners: 'Burners',
       eq_fryer: 'Deep fryer',
@@ -232,12 +238,8 @@
       g_kitchen_cap: 'Stainless steel kitchen interior',
       g_orange: 'Orange-red trailer with a service window and tow hitch',
       g_orange_cap: 'Orange-red trailer',
-      promos_title: 'Promotional material',
-      promos_sub: 'Our original ads, as published.',
-      promo_1: 'Promotional ad 1: pink, blue and red trailers with a stainless steel kitchen',
-      promo_2: 'Promotional ad 2: red trailer with awning windows',
-      promo_3: 'Promotional ad 3: blue 8 × 16 ft trailer',
-      promo_4: 'Promotional ad 4: trailers and an orange-red food truck',
+      g_cta_kicker: 'Have a concept?',
+      g_cta_title: 'Let’s design your unit',
       lb_aria: 'Gallery',
       lb_close: 'Close',
       lb_prev: 'Previous',
@@ -247,7 +249,8 @@
       cta2_button: 'Talk to an advisor',
       contact_eyebrow: 'No-obligation quote',
       contact_title: 'Contact',
-      contact_sub: 'Fill out the form and send us your request via WhatsApp or email.',
+      contact_sub: 'Fill out the form and send us your request by email.',
+      contact_sub_wa: 'Fill out the form and send us your request via WhatsApp or email.',
       ph_name: 'Name',
       ph_phone: 'Phone',
       ph_email: 'Email',
@@ -258,7 +261,8 @@
       opt_truck: 'Truck',
       opt_van: 'Van',
       opt_conversion: 'Conversion',
-      form_hint: 'Fields marked * are required. Sending opens WhatsApp or your email app with the message ready.',
+      form_hint: 'Fields marked * are required. Sending opens your email app with the message ready.',
+      form_hint_wa: 'Fields marked * are required. Sending opens WhatsApp or your email app with the message ready.',
       send_wa: 'Send via WhatsApp',
       send_mail: 'Send via email',
       label_phone: 'Phone',
@@ -300,6 +304,25 @@
   const langToggle = document.getElementById('langToggle');
   const menuToggle = document.getElementById('menuToggle');
 
+  // ---------- Contact channels ----------
+  if (WA_NUMBER) {
+    document.querySelectorAll('.js-wa').forEach((el) => {
+      if (el.tagName === 'A') el.href = `https://wa.me/${WA_NUMBER}`;
+      el.hidden = false;
+    });
+    document.querySelectorAll('[data-hide-if-wa]').forEach((el) => { el.hidden = true; });
+    document.querySelectorAll('.js-mail-btn').forEach((el) => el.classList.replace('btn-primary', 'btn-ghost'));
+    document.querySelectorAll('[data-i18n="contact_sub"], [data-i18n="form_hint"]').forEach((el) => {
+      el.dataset.i18n += '_wa';
+    });
+    document.body.classList.add('has-wa');
+  }
+  if (PHONE) {
+    const tel = 'tel:' + PHONE.replace(/[^\d+]/g, '');
+    document.querySelectorAll('.js-tel').forEach((el) => { el.href = tel; el.hidden = false; });
+    document.querySelectorAll('.js-tel-text').forEach((el) => { el.textContent = PHONE; });
+  }
+
   function applyI18n() {
     const dict = i18n[currentLang];
     document.documentElement.lang = currentLang;
@@ -337,7 +360,7 @@
       applyI18n();
     });
   }
-  if (currentLang !== 'es') applyI18n();
+  if (currentLang !== 'es' || WA_NUMBER) applyI18n();
   else if (langToggle) langToggle.setAttribute('lang', 'en');
 
   const yearEl = document.getElementById('year');
@@ -446,7 +469,7 @@
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      const channel = (e.submitter && e.submitter.dataset.channel) || 'wa';
+      const channel = (e.submitter && e.submitter.dataset.channel) || (WA_NUMBER ? 'wa' : 'mail');
       const fields = ['nombre', 'telefono', 'email', 'tipo'].map((n) => form.elements[n]);
       let firstBad = null;
       fields.forEach((el) => {
