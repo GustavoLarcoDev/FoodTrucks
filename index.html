@@ -4,220 +4,486 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FTrucks | Fabricación de Food Trucks en México</title>
-  <meta name="description" content="Fabricamos food trucks en México con cumplimiento normativo para operar y exportar. Diseño, ingeniería y entrega llave en mano." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Fabricamos food trucks y remolques de comida en México: diseño, ingeniería sanitaria, gas y eléctrica, equipamiento y entrega llave en mano." />
+  <meta name="theme-color" content="#111418" />
+  <link rel="canonical" href="https://gustavolarcodev.github.io/FoodTrucks/" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FTrucks" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="FTrucks | Fabricación de Food Trucks en México" />
+  <meta property="og:description" content="Diseño, ingeniería y fabricación de food trucks y remolques de comida, llave en mano." />
+  <meta property="og:url" content="https://gustavolarcodev.github.io/FoodTrucks/" />
+  <meta property="og:image" content="https://gustavolarcodev.github.io/FoodTrucks/Images/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Remolque de comida rojo con ventanas de servicio abiertas" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FTrucks | Fabricación de Food Trucks en México" />
+  <meta name="twitter:description" content="Diseño, ingeniería y fabricación de food trucks y remolques de comida, llave en mano." />
+  <meta name="twitter:image" content="https://gustavolarcodev.github.io/FoodTrucks/Images/og.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="Images/fotos/remolque-rojo.webp" imagesrcset="Images/fotos/remolque-rojo-640.webp 640w, Images/fotos/remolque-rojo.webp 1024w" imagesizes="(max-width: 960px) 92vw, 46vw" />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FTrucks",
+    "description": "Fabricación de food trucks y remolques de comida en México.",
+    "url": "https://gustavolarcodev.github.io/FoodTrucks/",
+    "logo": "https://gustavolarcodev.github.io/FoodTrucks/apple-touch-icon.png",
+    "image": "https://gustavolarcodev.github.io/FoodTrucks/Images/og.jpg",
+    "email": "ventas@ftrucks.mx",
+    "telephone": "+52 866 154 1605",
+    "areaServed": "MX"
+  }
+  </script>
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- SVG icon sprite -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4.5L22 13.5V16h-8"/><circle cx="6" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/><path d="M5 9h6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.6-3.4 8.2-8 9-4.6-.8-8-4.4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M16 7l3 3M14 9l2 2"/></symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M6 3v7a2 2 0 0 0 2 2v9M10 3v7a2 2 0 0 1-2 2M8 3v5"/><path d="M17 21V3c-2.2 1-3.5 3.6-3.5 7v3H17"/></symbol>
+    <symbol id="i-blueprint" viewBox="0 0 24 24"><path d="M3 4h18v16H3z"/><path d="M3 9h5v11M8 14h6v6M14 4v6h7"/></symbol>
+    <symbol id="i-weld" viewBox="0 0 24 24"><path d="M14.5 5.5a4 4 0 0 0 5 5L13 17l-5 2 2-5z"/><path d="M4 20l3-3"/><path d="M18 2v2M21 4l-1.5 1.5M22 7h-2"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 21c-3.9 0-7-2.7-7-6.5 0-3.3 2.3-5.4 3.8-7.6.6 1.4 1.4 2.3 2.4 2.8C11.5 6.6 12.6 4.4 14 3c.4 2.4 1.7 3.9 3 5.6 1.3 1.6 2 3.4 2 5.9 0 3.8-3.1 6.5-7 6.5z"/><path d="M12 21c-1.7 0-3-1.2-3-2.9 0-1.6 1.3-2.6 3-4.6 1.7 2 3 3 3 4.6 0 1.7-1.3 2.9-3 2.9z"/></symbol>
+    <symbol id="i-stamp" viewBox="0 0 24 24"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.7-1.2A9 9 0 1 0 12 3z"/><path d="M8.6 8.2c.2-.4.5-.5.8-.5h.6c.2 0 .4.1.5.4l.8 1.9c.1.2 0 .5-.1.7l-.6.7c.8 1.5 2 2.6 3.5 3.3l.7-.8c.2-.2.4-.2.7-.1l1.8.9c.3.1.4.3.4.6v.6c0 .4-.2.7-.5.9-.8.5-1.8.6-2.7.3-2.8-1-4.9-3.1-5.9-5.9-.3-.9-.2-1.9.3-2.7z"/></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
     <div class="container header-inner">
-      <div class="brand">
-        <span class="logo">FTrucks</span>
-        <span class="tag" data-i18n="brand_tag">Food Trucks hechos en México</span>
-      </div>
-      <nav class="nav">
+      <a class="brand" href="#top" aria-label="FTrucks, inicio" data-i18n-aria-label="brand_aria">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="var(--accent)"/><path fill="#fff" d="M9 17h30v24H9zM41 25h8.5l5.5 7v9H41z"/><path fill="var(--accent)" d="M14 22h20v8H14zM44 28h4.6l3 4H44z"/><circle cx="19" cy="44" r="6" fill="#111418" stroke="#fff" stroke-width="2.5"/><circle cx="47" cy="44" r="6" fill="#111418" stroke="#fff" stroke-width="2.5"/></svg>
+        <span class="brand-text">
+          <span class="logo">FTrucks</span>
+          <span class="tag" data-i18n="brand_tag">Food trucks hechos en México</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="siteNav" aria-label="Principal" data-i18n-aria-label="nav_aria">
         <a href="#servicios" data-i18n="nav_services">Servicios</a>
+        <a href="#modelo" data-i18n="nav_model">Modelo</a>
         <a href="#proceso" data-i18n="nav_process">Proceso</a>
         <a href="#cumplimiento" data-i18n="nav_compliance">Cumplimiento</a>
         <a href="#portafolio" data-i18n="nav_portfolio">Portafolio</a>
-        <a href="#contacto" class="btn btn-primary sm-hide" data-i18n="nav_quote">Cotiza</a>
-        <button id="langToggle" class="btn btn-ghost" type="button" aria-label="Cambiar idioma">EN</button>
+        <a href="#contacto" class="btn btn-primary btn-sm nav-cta" data-i18n="nav_quote">Cotiza</a>
       </nav>
-      <a href="#contacto" class="btn btn-primary sm-only" data-i18n="nav_quote">Cotiza</a>
+
+      <div class="header-actions">
+        <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch to English">EN</button>
+        <button id="menuToggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú" data-i18n-aria-label="menu_open">
+          <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-copy">
-        <h1 data-i18n="hero_title">Fabricación de food trucks con estándares profesionales</h1>
-        <p data-i18n="hero_sub">Diseñamos y construimos unidades listas para operar y exportar en México, con ingeniería sanitaria, gas, eléctrica y acabados de alto desempeño.</p>
-        <div class="cta-group">
-          <a href="#contacto" class="btn btn-primary" data-i18n="cta_quote">Solicitar cotización</a>
-          <a href="#portafolio" class="btn btn-ghost" data-i18n="cta_portfolio">Ver portafolio</a>
-        </div>
-        <div class="trust">
-          <div class="trust-item" data-i18n="trust_warranty">Garantía de fábrica</div>
-          <div class="divider"></div>
-          <div class="trust-item" data-i18n="trust_turnkey">Entrega llave en mano</div>
-          <div class="divider"></div>
-          <div class="trust-item" data-i18n="trust_foodgrade">Materiales grado alimenticio</div>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img src="Images/FT1.png" alt="Food truck fabricado en México" />
-      </div>
-    </div>
-  </section>
-
-  <section id="servicios" class="section">
-    <div class="container">
-      <h2 data-i18n="services_title">Servicios especializados</h2>
-      <p class="section-sub" data-i18n="services_sub">Soluciones integrales para tu operación móvil de alimentos.</p>
-      <div class="grid cards">
-        <div class="card">
-          <img src="Images/FT2.png" alt="Diseño e ingeniería" />
-          <h3 data-i18n="svc_design_title">Diseño e ingeniería</h3>
-          <p data-i18n="svc_design_desc">Layout sanitario, flujos, selección de equipo y memoria técnica para una operación eficiente.</p>
-        </div>
-        <div class="card">
-          <img src="Images/FT3.png" alt="Fabricación" />
-          <h3 data-i18n="svc_build_title">Fabricación a medida</h3>
-          <p data-i18n="svc_build_desc">Estructura, recubrimientos, instalaciones eléctricas y de gas con pruebas de hermeticidad.</p>
-        </div>
-        <div class="card">
-          <img src="Images/FT4.png" alt="Equipamiento" />
-          <h3 data-i18n="svc_equip_title">Equipamiento profesional</h3>
-          <p data-i18n="svc_equip_desc">Plancha, freidoras, refrigeración, campana y extracción con filtros y supresión opcional.</p>
-        </div>
-        <div class="card">
-          <img src="Images/FT1.png" alt="Trámites" />
-          <h3 data-i18n="svc_paper_title">Acompañamiento en trámites</h3>
-          <p data-i18n="svc_paper_desc">Documentación técnica de la unidad para alta, permisos y operación en México.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="proceso" class="section alt">
-    <div class="container">
-      <h2 data-i18n="process_title">Proceso claro y transparente</h2>
-      <div class="timeline">
-        <div class="step">
-          <span class="step-num">1</span>
-          <h3 data-i18n="proc_1_title">Brief y propuesta</h3>
-          <p data-i18n="proc_1_desc">Entendemos tu concepto y definimos alcance, tiempos y presupuesto.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">2</span>
-          <h3 data-i18n="proc_2_title">Diseño e ingeniería</h3>
-          <p data-i18n="proc_2_desc">Planos, selección de equipos y layout validado.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">3</span>
-          <h3 data-i18n="proc_3_title">Producción</h3>
-          <p data-i18n="proc_3_desc">Fabricación, instalaciones y acabados con control de calidad.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">4</span>
-          <h3 data-i18n="proc_4_title">Entrega y capacitación</h3>
-          <p data-i18n="proc_4_desc">Pruebas de funcionamiento y capacitación operativa.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="cumplimiento" class="section">
-    <div class="container">
-      <h2 data-i18n="compliance_title">Cumplimiento y seguridad</h2>
-      <p class="section-sub" data-i18n="compliance_sub">Buenas prácticas y normativas aplicables a la operación de unidades móviles de alimentos en México.</p>
-      <div class="grid badges">
-        <div class="badge">
-          <img src="Images/FT1.png" alt="Acero inoxidable" />
-          <h3 data-i18n="comp_food_title">Grado alimenticio</h3>
-          <p data-i18n="comp_food_desc">Superficies de contacto en acero inoxidable y recubrimientos lavables.</p>
-        </div>
-        <div class="badge">
-          <img src="Images/FT2.png" alt="Instalación eléctrica" />
-          <h3 data-i18n="comp_elec_title">Instalación eléctrica</h3>
-          <p data-i18n="comp_elec_desc">Canalización, protecciones y tierra física para operación segura.</p>
-        </div>
-        <div class="badge">
-          <img src="Images/FT3.png" alt="Instalación de gas" />
-          <h3 data-i18n="comp_gas_title">Instalación de gas</h3>
-          <p data-i18n="comp_gas_desc">Pruebas de hermeticidad, válvulas y ventilación conforme buenas prácticas.</p>
-        </div>
-        <div class="badge">
-          <img src="Images/FT4.png" alt="Higiene" />
-          <h3 data-i18n="comp_hyg_title">Higiene y flujo</h3>
-          <p data-i18n="comp_hyg_desc">Lavamanos, áreas separadas, almacenamiento y control de residuos.</p>
-        </div>
-      </div>
-      <div class="note" data-i18n="compliance_note">La normativa específica puede variar según municipio y requisitos del punto de operación.</div>
-    </div>
-  </section>
-
-  <section id="portafolio" class="section alt">
-    <div class="container">
-      <h2 data-i18n="portfolio_title">Portafolio</h2>
-      <p class="section-sub" data-i18n="portfolio_sub">Algunos proyectos representativos. Reemplaza estas imágenes con tus unidades en la carpeta Images.</p>
-      <div class="grid gallery">
-        <img src="Images/FT1.png" alt="Proyecto 1" />
-        <img src="Images/FT2.png" alt="Proyecto 2" />
-        <img src="Images/FT3.png" alt="Proyecto 3" />
-        <img src="Images/FT4.png" alt="Proyecto 4" />
-      </div>
-    </div>
-  </section>
-
-  <section class="section cta">
-    <div class="container cta-inner">
-      <h2 data-i18n="cta2_title">¿Listo para arrancar tu food truck?</h2>
-      <p data-i18n="cta2_sub">Cuéntanos tu concepto y te enviamos una propuesta con tiempos y alcance.</p>
-      <a href="#contacto" class="btn btn-primary" data-i18n="cta2_button">Hablar con un asesor</a>
-    </div>
-  </section>
-
-  <section id="contacto" class="section">
-    <div class="container">
-      <h2 data-i18n="contact_title">Contacto</h2>
-      <div class="contact">
-        <form class="form" id="quoteForm" novalidate>
-          <div class="form-row">
-            <input type="text" name="nombre" placeholder="Nombre" data-i18n-placeholder="ph_name" required />
-            <input type="tel" name="telefono" placeholder="Teléfono" data-i18n-placeholder="ph_phone" required />
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-dark reveal" data-i18n="hero_eyebrow">Fabricantes de food trucks · México</p>
+          <h1 id="hero-title" class="reveal" data-i18n="hero_title">Fabricación de food trucks con estándares profesionales</h1>
+          <p class="hero-sub reveal" data-i18n="hero_sub">Diseñamos y construimos unidades listas para operar y exportar en México, con ingeniería sanitaria, gas, eléctrica y acabados de alto desempeño.</p>
+          <div class="cta-group reveal">
+            <a href="#contacto" class="btn btn-primary btn-lg">
+              <span data-i18n="cta_quote">Solicitar cotización</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a href="https://wa.me/528661541605" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+              <span data-i18n="cta_whatsapp_long">Escríbenos por WhatsApp</span>
+            </a>
           </div>
-          <div class="form-row">
-            <input type="email" name="email" placeholder="Email" data-i18n-placeholder="ph_email" required />
-            <select name="tipo" required>
-              <option value="" disabled selected data-i18n="ph_type">Tipo de unidad</option>
-              <option data-i18n="opt_trailer">Remolque</option>
-              <option data-i18n="opt_truck">Camioneta</option>
-              <option data-i18n="opt_van">Van</option>
-              <option data-i18n="opt_conversion">Conversión</option>
-            </select>
-          </div>
-          <textarea name="mensaje" rows="4" placeholder="Cuéntanos tu concepto, menú y necesidades" data-i18n-placeholder="ph_message"></textarea>
-          <button type="submit" class="btn btn-primary full" data-i18n="cta_quote">Solicitar cotización</button>
-          <p class="form-msg" id="formMsg"></p>
-        </form>
-        <div class="contact-info">
-          <div class="info-item">
-            <strong data-i18n="label_phone">Teléfono</strong>
-            <a href="tel:+5215555555555">+52 1 55 5555 5555</a>
-          </div>
-          <div class="info-item">
-            <strong data-i18n="label_email">Email</strong>
-            <a href="mailto:ventas@ftrucks.mx">ventas@ftrucks.mx</a>
-          </div>
-          <div class="info-item">
-            <strong data-i18n="label_whatsapp">WhatsApp</strong>
-            <a class="wa" href="https://wa.me/525555555555" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Chatear ahora</a>
-          </div>
-          <div class="info-item">
-            <strong data-i18n="label_location">Ubicación</strong>
-            <span>CDMX, México</span>
+          <ul class="trust reveal" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="trust_warranty">Garantía de fábrica</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg><span data-i18n="trust_turnkey">Entrega llave en mano</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg><span data-i18n="trust_foodgrade">Materiales grado alimenticio</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-media reveal">
+          <figure class="hero-frame">
+            <img src="Images/fotos/remolque-rojo.webp"
+                 srcset="Images/fotos/remolque-rojo-640.webp 640w, Images/fotos/remolque-rojo.webp 1024w"
+                 sizes="(max-width: 960px) 92vw, 46vw"
+                 width="1024" height="550" fetchpriority="high" decoding="async"
+                 alt="Remolque de comida rojo con dos ventanas de servicio abiertas y equipo de aire acondicionado"
+                 data-i18n-alt="alt_hero" />
+          </figure>
+          <figure class="hero-float">
+            <img src="Images/fotos/cocina-inox-detalle.webp" width="246" height="297" decoding="async"
+                 alt="Interior de cocina en acero inoxidable con gabinetes rojos" data-i18n-alt="alt_kitchen_detail" />
+            <figcaption data-i18n="hero_float">Interior en acero inoxidable</figcaption>
+          </figure>
+          <span class="hero-badge"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="brand_tag">Food trucks hechos en México</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="section" aria-labelledby="servicios-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="services_eyebrow">Lo que hacemos</p>
+          <h2 id="servicios-title" data-i18n="services_title">Servicios especializados</h2>
+          <p class="section-sub" data-i18n="services_sub">Soluciones integrales para tu operación móvil de alimentos.</p>
+        </header>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-blueprint"/></svg></span><span class="card-num">01</span></div>
+            <h3 data-i18n="svc_design_title">Diseño e ingeniería</h3>
+            <p data-i18n="svc_design_desc">Layout sanitario, flujos, selección de equipo y memoria técnica para una operación eficiente.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-weld"/></svg></span><span class="card-num">02</span></div>
+            <h3 data-i18n="svc_build_title">Fabricación a medida</h3>
+            <p data-i18n="svc_build_desc">Estructura, recubrimientos, instalaciones eléctricas y de gas con pruebas de hermeticidad.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span><span class="card-num">03</span></div>
+            <h3 data-i18n="svc_equip_title">Equipamiento profesional</h3>
+            <p data-i18n="svc_equip_desc">Plancha, freidoras, refrigeración, campana y extracción con filtros y supresión opcional.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-top"><span class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-stamp"/></svg></span><span class="card-num">04</span></div>
+            <h3 data-i18n="svc_paper_title">Acompañamiento en trámites</h3>
+            <p data-i18n="svc_paper_desc">Documentación técnica de la unidad para alta, permisos y operación en México.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="modelo" class="section section-white" aria-labelledby="modelo-title">
+      <div class="container model">
+        <figure class="model-media reveal">
+          <img src="Images/fotos/remolque-azul-8x16.webp"
+               srcset="Images/fotos/remolque-azul-8x16-640.webp 640w, Images/fotos/remolque-azul-8x16.webp 1024w"
+               sizes="(max-width: 960px) 92vw, 50vw"
+               width="1024" height="575" loading="lazy" decoding="async"
+               alt="Remolque de comida azul de 8 × 16 pies con ventana de servicio y plataforma trasera"
+               data-i18n-alt="alt_blue" />
+          <span class="model-size">8 × 16 ft</span>
+        </figure>
+        <div class="model-copy reveal">
+          <p class="eyebrow" data-i18n="model_eyebrow">Modelo destacado</p>
+          <h2 id="modelo-title" data-i18n="model_title">Remolque 8 × 16 ft</h2>
+          <p class="model-price"><span class="model-from" data-i18n="model_from">Desde</span> <strong>21,500 USD</strong></p>
+          <p class="model-note" data-i18n="model_note">Precio de promoción mostrado en nuestro material publicitario. Confirma disponibilidad y precio vigente al cotizar.</p>
+          <h3 class="model-list-title" data-i18n="model_equipment">Equipamiento de la promoción</h3>
+          <ul class="model-list" role="list">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_griddle">Plancha</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_burners">Quemadores</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_fryer">Freidora</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="eq_bainmarie">Baño maría</span></li>
+          </ul>
+          <div class="cta-group">
+            <a href="#contacto" class="btn btn-primary" data-preset="remolque">
+              <span data-i18n="model_cta">Cotizar este modelo</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section id="proceso" class="section" aria-labelledby="proceso-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="process_eyebrow">Cómo trabajamos</p>
+          <h2 id="proceso-title" data-i18n="process_title">Proceso claro y transparente</h2>
+        </header>
+        <ol class="timeline" role="list">
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">01</span>
+            <h3 data-i18n="proc_1_title">Brief y propuesta</h3>
+            <p data-i18n="proc_1_desc">Entendemos tu concepto y definimos alcance, tiempos y presupuesto.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">02</span>
+            <h3 data-i18n="proc_2_title">Diseño e ingeniería</h3>
+            <p data-i18n="proc_2_desc">Planos, selección de equipos y layout validado.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">03</span>
+            <h3 data-i18n="proc_3_title">Producción</h3>
+            <p data-i18n="proc_3_desc">Fabricación, instalaciones y acabados con control de calidad.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num" aria-hidden="true">04</span>
+            <h3 data-i18n="proc_4_title">Entrega y capacitación</h3>
+            <p data-i18n="proc_4_desc">Pruebas de funcionamiento y capacitación operativa.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="cumplimiento" class="section section-dark" aria-labelledby="cumplimiento-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow eyebrow-dark" data-i18n="compliance_eyebrow">Seguridad desde el diseño</p>
+          <h2 id="cumplimiento-title" data-i18n="compliance_title">Cumplimiento y seguridad</h2>
+          <p class="section-sub" data-i18n="compliance_sub">Buenas prácticas y normativas aplicables a la operación de unidades móviles de alimentos en México.</p>
+        </header>
+        <div class="badges">
+          <article class="badge reveal">
+            <span class="badge-icon"><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg></span>
+            <div>
+              <h3 data-i18n="comp_food_title">Grado alimenticio</h3>
+              <p data-i18n="comp_food_desc">Superficies de contacto en acero inoxidable y recubrimientos lavables.</p>
+            </div>
+          </article>
+          <article class="badge reveal">
+            <span class="badge-icon"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg></span>
+            <div>
+              <h3 data-i18n="comp_elec_title">Instalación eléctrica</h3>
+              <p data-i18n="comp_elec_desc">Canalización, protecciones y tierra física para operación segura.</p>
+            </div>
+          </article>
+          <article class="badge reveal">
+            <span class="badge-icon"><svg class="icon" aria-hidden="true"><use href="#i-flame"/></svg></span>
+            <div>
+              <h3 data-i18n="comp_gas_title">Instalación de gas</h3>
+              <p data-i18n="comp_gas_desc">Pruebas de hermeticidad, válvulas y ventilación conforme buenas prácticas.</p>
+            </div>
+          </article>
+          <article class="badge reveal">
+            <span class="badge-icon"><svg class="icon" aria-hidden="true"><use href="#i-drop"/></svg></span>
+            <div>
+              <h3 data-i18n="comp_hyg_title">Higiene y flujo</h3>
+              <p data-i18n="comp_hyg_desc">Lavamanos, áreas separadas, almacenamiento y control de residuos.</p>
+            </div>
+          </article>
+        </div>
+        <p class="note reveal"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="compliance_note">La normativa específica puede variar según municipio y requisitos del punto de operación.</span></p>
+      </div>
+    </section>
+
+    <section id="portafolio" class="section" aria-labelledby="portafolio-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="portfolio_eyebrow">Unidades fabricadas</p>
+          <h2 id="portafolio-title" data-i18n="portfolio_title">Portafolio</h2>
+          <p class="section-sub" data-i18n="portfolio_sub">Algunos proyectos representativos: remolques, acabados e interiores.</p>
+        </header>
+
+        <ul class="gallery" role="list">
+          <li class="tile tile-xl reveal">
+            <button type="button" class="tile-btn" data-full="Images/fotos/remolque-rojo.webp">
+              <img src="Images/fotos/remolque-rojo-640.webp" srcset="Images/fotos/remolque-rojo-640.webp 640w, Images/fotos/remolque-rojo.webp 1024w" sizes="(max-width: 700px) 92vw, 50vw" width="1024" height="550" loading="lazy" decoding="async" alt="Remolque rojo con dos ventanas de servicio abiertas" data-i18n-alt="g_red" />
+              <span class="tile-cap"><span data-i18n="g_red_cap">Remolque rojo con ventanas abatibles</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
+            </button>
+          </li>
+          <li class="tile tile-wide reveal">
+            <button type="button" class="tile-btn" data-full="Images/fotos/remolque-azul-8x16.webp">
+              <img src="Images/fotos/remolque-azul-8x16-640.webp" width="640" height="359" loading="lazy" decoding="async" alt="Remolque azul de 8 × 16 pies con plataforma trasera" data-i18n-alt="g_blue" />
+              <span class="tile-cap"><span data-i18n="g_blue_cap">Remolque azul 8 × 16 ft</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
+            </button>
+          </li>
+          <li class="tile reveal">
+            <button type="button" class="tile-btn" data-full="Images/fotos/remolque-rosa.webp">
+              <img src="Images/fotos/remolque-rosa.webp" width="510" height="342" loading="lazy" decoding="async" alt="Remolque rosa con menú exhibido y la palabra Welcome en el costado" data-i18n-alt="g_pink" />
+              <span class="tile-cap"><span data-i18n="g_pink_cap">Remolque rosa</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
+            </button>
+          </li>
+          <li class="tile reveal">
+            <button type="button" class="tile-btn" data-full="Images/fotos/remolque-nocturno.webp">
+              <img src="Images/fotos/remolque-nocturno.webp" width="509" height="373" loading="lazy" decoding="async" alt="Remolque rojo de noche con reflectores y luces LED en el contorno" data-i18n-alt="g_night" />
+              <span class="tile-cap"><span data-i18n="g_night_cap">Iluminación LED nocturna</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
+            </button>
+          </li>
+          <li class="tile tile-wide reveal">
+            <button type="button" class="tile-btn" data-full="Images/fotos/cocina-inox.webp">
+              <img src="Images/fotos/cocina-inox.webp" width="503" height="244" loading="lazy" decoding="async" alt="Interior de cocina en acero inoxidable con campana de extracción y gabinetes rojos" data-i18n-alt="g_kitchen" />
+              <span class="tile-cap"><span data-i18n="g_kitchen_cap">Interior de cocina en acero inoxidable</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
+            </button>
+          </li>
+          <li class="tile tile-wide reveal">
+            <button type="button" class="tile-btn" data-full="Images/fotos/remolque-naranja.webp">
+              <img src="Images/fotos/remolque-naranja.webp" width="509" height="236" loading="lazy" decoding="async" alt="Remolque rojo anaranjado con ventana de servicio y lanza de arrastre" data-i18n-alt="g_orange" />
+              <span class="tile-cap"><span data-i18n="g_orange_cap">Remolque rojo anaranjado</span><svg class="icon" aria-hidden="true"><use href="#i-expand"/></svg></span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="promos reveal">
+          <div class="promos-head">
+            <h3 data-i18n="promos_title">Material promocional</h3>
+            <p data-i18n="promos_sub">Nuestros anuncios originales, tal como se publicaron.</p>
+          </div>
+          <ul class="promo-list" role="list">
+            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-1.webp"><img src="Images/promos/flyer-1-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 1: remolques rosa, azul y rojos con cocina de acero inoxidable" data-i18n-alt="promo_1" /></button></li>
+            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-2.webp"><img src="Images/promos/flyer-2-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 2: remolque rojo con ventanas abatibles" data-i18n-alt="promo_2" /></button></li>
+            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-3.webp"><img src="Images/promos/flyer-3-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 3: remolque azul de 8 × 16 pies" data-i18n-alt="promo_3" /></button></li>
+            <li><button type="button" class="promo-btn tile-btn" data-full="Images/promos/flyer-4.webp"><img src="Images/promos/flyer-4-thumb.webp" width="200" height="300" loading="lazy" decoding="async" alt="Anuncio promocional 4: remolques y food truck rojo anaranjado" data-i18n-alt="promo_4" /></button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-inner reveal">
+        <div>
+          <h2 id="cta-title" data-i18n="cta2_title">¿Listo para arrancar tu food truck?</h2>
+          <p data-i18n="cta2_sub">Cuéntanos tu concepto y te enviamos una propuesta con tiempos y alcance.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#contacto" class="btn btn-light btn-lg">
+            <span data-i18n="cta2_button">Hablar con un asesor</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a href="https://wa.me/528661541605" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section" aria-labelledby="contacto-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow" data-i18n="contact_eyebrow">Cotiza sin compromiso</p>
+          <h2 id="contacto-title" data-i18n="contact_title">Contacto</h2>
+          <p class="section-sub" data-i18n="contact_sub">Completa el formulario y envíanos tu solicitud por WhatsApp o por correo.</p>
+        </header>
+        <div class="contact">
+          <form class="form reveal" id="quoteForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-nombre"><span data-i18n="ph_name">Nombre</span> <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-nombre" type="text" name="nombre" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="f-telefono"><span data-i18n="ph_phone">Teléfono</span> <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-telefono" type="tel" name="telefono" autocomplete="tel" inputmode="tel" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-email"><span data-i18n="ph_email">Correo</span> <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-email" type="email" name="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="f-tipo"><span data-i18n="ph_type">Tipo de unidad</span> <span class="req" aria-hidden="true">*</span></label>
+                <select id="f-tipo" name="tipo" required>
+                  <option value="" disabled selected data-i18n="ph_select">Selecciona una opción</option>
+                  <option value="remolque" data-i18n="opt_trailer">Remolque</option>
+                  <option value="camioneta" data-i18n="opt_truck">Camioneta</option>
+                  <option value="van" data-i18n="opt_van">Van</option>
+                  <option value="conversion" data-i18n="opt_conversion">Conversión</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-mensaje" data-i18n="ph_message">Cuéntanos tu concepto, menú y necesidades</label>
+              <textarea id="f-mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+            <p class="form-hint" data-i18n="form_hint">Los campos con * son obligatorios. Al enviar se abrirá WhatsApp o tu app de correo con el mensaje listo.</p>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary btn-lg" data-channel="wa">
+                <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span data-i18n="send_wa">Enviar por WhatsApp</span>
+              </button>
+              <button type="submit" class="btn btn-ghost btn-lg" data-channel="mail">
+                <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+                <span data-i18n="send_mail">Enviar por correo</span>
+              </button>
+            </div>
+            <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="contact-info reveal">
+            <a class="info-item" href="tel:+528661541605">
+              <span class="info-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <span><strong data-i18n="label_phone">Teléfono</strong><span class="info-val">+52 866 154 1605</span></span>
+            </a>
+            <a class="info-item" href="https://wa.me/528661541605" target="_blank" rel="noopener">
+              <span class="info-icon info-icon-wa"><svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg></span>
+              <span><strong data-i18n="label_whatsapp">WhatsApp</strong><span class="info-val" data-i18n="cta_whatsapp">Chatear ahora</span></span>
+            </a>
+            <a class="info-item" href="mailto:ventas@ftrucks.mx">
+              <span class="info-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <span><strong data-i18n="label_email">Correo</strong><span class="info-val">ventas@ftrucks.mx</span></span>
+            </a>
+            <div class="info-item">
+              <span class="info-icon"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+              <span><strong data-i18n="label_location">Ubicación</strong><span class="info-val">CDMX, México</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="copy">© <span id="year"></span> FTrucks. <span data-i18n="footer_rights">Todos los derechos reservados.</span></div>
-      <div class="links">
-        <a href="#cumplimiento" data-i18n="footer_compliance">Cumplimiento</a>
-        <a href="#contacto" data-i18n="footer_contact">Contacto</a>
-        <a href="#" id="toTop" data-i18n="footer_top">Volver arriba</a>
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="FTrucks, volver arriba" data-i18n-aria-label="footer_top_aria">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="var(--accent)"/><path fill="#fff" d="M9 17h30v24H9zM41 25h8.5l5.5 7v9H41z"/><path fill="var(--accent)" d="M14 22h20v8H14zM44 28h4.6l3 4H44z"/><circle cx="19" cy="44" r="6" fill="#111418" stroke="#fff" stroke-width="2.5"/><circle cx="47" cy="44" r="6" fill="#111418" stroke="#fff" stroke-width="2.5"/></svg>
+          <span class="logo">FTrucks</span>
+        </a>
+        <p data-i18n="footer_tag">Diseño, ingeniería y fabricación de food trucks en México.</p>
       </div>
+      <nav class="footer-links" aria-label="Pie de página" data-i18n-aria-label="footer_nav_aria">
+        <a href="#servicios" data-i18n="nav_services">Servicios</a>
+        <a href="#proceso" data-i18n="nav_process">Proceso</a>
+        <a href="#cumplimiento" data-i18n="footer_compliance">Cumplimiento</a>
+        <a href="#portafolio" data-i18n="nav_portfolio">Portafolio</a>
+        <a href="#contacto" data-i18n="footer_contact">Contacto</a>
+      </nav>
+      <div class="footer-contact">
+        <a href="tel:+528661541605">+52 866 154 1605</a>
+        <a href="mailto:ventas@ftrucks.mx">ventas@ftrucks.mx</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> FTrucks. <span data-i18n="footer_rights">Todos los derechos reservados.</span></p>
+      <a href="#top" data-i18n="footer_top">Volver arriba</a>
     </div>
   </footer>
 
-  <a class="floating-wa" href="https://wa.me/525555555555" target="_blank" rel="noopener" aria-label="WhatsApp" data-i18n-aria-label="wa_aria">WA</a>
+  <a class="floating-wa" href="https://wa.me/528661541605" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp" data-i18n-aria-label="wa_aria">
+    <svg class="icon" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
 
-  <script src="script.js"></script>
+  <dialog class="lightbox" id="lightbox" aria-label="Galería" data-i18n-aria-label="lb_aria">
+    <div class="lb-inner">
+      <img id="lbImg" src="" alt="" />
+      <p class="lb-cap" id="lbCap"></p>
+    </div>
+    <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Cerrar" data-i18n-aria-label="lb_close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button type="button" class="lb-btn lb-prev" id="lbPrev" aria-label="Anterior" data-i18n-aria-label="lb_prev"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+    <button type="button" class="lb-btn lb-next" id="lbNext" aria-label="Siguiente" data-i18n-aria-label="lb_next"><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+  </dialog>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
